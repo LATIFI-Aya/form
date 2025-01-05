@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=di, initial-scale=1.0">
+    <link rel="stylesheet" href="stryle.css">
+    <title>Form</title>
+</head>
+<body>
+    <div class="form">
+        <h2>Form</h2>
+        <form id="Application-form" onsubmit="return validateform()">
+            <div class="form-send">
+                <label for="name"> Full name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-send">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-send">
+                <label for="phone">Phone number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-send">
+                <label for="university">University us are from:</label>
+                <select name="university" id="university">
+                    <option value="">Select a university</option>
+                    <option value="">FST</option>
+                    <option value="">FS</option>
+                    <option value="">EST</option>
+                </select>
+            </div>
+                <div class="form-send">
+                    <label for="resume">Upload resume (PDF only):</label>
+                    <input type="file" id="resume" name="resume" accept=".pdf" required>
+                </div>
+                <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script  src="script.js"></script>
+</body>
+</html>
