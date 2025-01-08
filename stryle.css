@@ -1,9 +1,11 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
-body{
+
+body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f4f7fc;
     display: flex;
@@ -12,36 +14,39 @@ body{
     height: 100vh;
     margin: 0;
 }
-#form{
+
+.form {
     background-color: #FFF;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 600;
+    max-width: 600px;
     padding: 30px;
     text-align: center;
-    animation: FadeIn 1s ease;
 }
-h2{
-    font-size:24px;
+
+h2 {
+    font-size: 24px;
     color: #333;
     margin-bottom: 20px;
 }
-.form-send{
+
+.form-send {
     margin-bottom: 20px;
     text-align: left;
 }
-label{
+
+label {
     font-size: 16px;
     color: #555;
-    margin-bottom: px;
     display: block;
 }
+
 input[type="text"],
 input[type="email"],
 input[type="tel"],
-input[type="file"],
-select{
+input[type="number"],
+select {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
@@ -51,8 +56,9 @@ select{
     background-color: #f9f9f9;
     transition: all 0.3s ease;
 }
-button{
-    background-color: #3bd86d;
+
+button {
+    background-color: #434644;
     color: #FFF;
     padding: 12px 20px;
     border: none;
@@ -62,41 +68,20 @@ button{
     width: 100%;
     transition: background-color 0.3s ease;
 }
-button:hover{
-    background-color: #45a049;
+
+button:hover {
+    background-color: #cd437a;
 }
-input[type="file"]{
-    padding: 8px;
+
+.cache {
+    display: none;
     background-color: #FFF;
-    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    padding: 30px;
+    text-align: center;
 }
-@media (max-width:768px)
-{
-    #form{
-        padding: 20px;
-    } 
-    h2{
-        font-size: 20px;
-    }
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"],
-    input[type="file"],
-    select{
-        font-size: 14px;
-    }
-    button{
-        font-size: 14px;
-    }
-}
-@keyframes fadeIn {
-    from{
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to{
-        opacity: 1;
-        transform: translateY(0);
-    }
-    
-}
+
+

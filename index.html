@@ -3,15 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=di, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/92d70a2fd8.js" crossorigin="anonymous"></script>
+ 
     <link rel="stylesheet" href="stryle.css">
     <title>Form</title>
 </head>
 <body>
-    <div class="form">
-        <h2>Form</h2>
-        <form id="Application-form" onsubmit="return validateform()">
+<div id="error"></div>
+    <!-- Form 1  -->
+    <div class="form" id="form1">
+        <h2>Form 1</h2>
+        <form id="form" onsubmit="return showSecondForm(event)">
             <div class="form-send">
-                <label for="name"> Full name:</label>
+                <label for="name">Full Name:</label>
                 <input type="text" id="name" name="name" required>
             </div>
             <div class="form-send">
@@ -19,25 +23,53 @@
                 <input type="email" id="email" name="email" required>
             </div>
             <div class="form-send">
-                <label for="phone">Phone number:</label>
+                <label for="phone">Phone Number:</label>
                 <input type="tel" id="phone" name="phone" required>
             </div>
             <div class="form-send">
-                <label for="university">University us are from:</label>
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+            <div class="form-send">
+                <label for="university">Which University are you from?</label>
                 <select name="university" id="university">
-                    <option value="">Select a university</option>
-                    <option value="">FST</option>
-                    <option value="">FS</option>
-                    <option value="">EST</option>
+                    <option value="FST">FST</option>
+                    <option value="FS">FS</option>
+                    <option value="EST">EST</option>
                 </select>
             </div>
-                <div class="form-send">
-                    <label for="resume">Upload resume (PDF only):</label>
-                    <input type="file" id="resume" name="resume" accept=".pdf" required>
-                </div>
-                <button type="submit">Submit</button>
+            <button type="submit" id="submit">Submit</button>
         </form>
     </div>
-    <script  src="script.js"></script>
+
+    <!-- Form 2  -->
+    <div class="cache" id="form2" style="display:none;">
+        <h2>Form 2 (Confirmation)</h2>
+        <div class="form-send">
+            <label for="name2">Full Name:</label>
+            <input type="text" id="name2" name="name" readonly>
+        </div>
+        <div class="form-send">
+            <label for="email2">Email:</label>
+            <input type="email" id="email2" name="email" readonly>
+        </div>
+        <div class="form-send">
+            <label for="phone2">Phone Number:</label>
+            <input type="tel" id="phone2" name="phone" readonly>
+        </div>
+        <div class="form-send">
+            <label for="age2">Age:</label>
+            <input type="number" id="age2" name="age" readonly>
+        </div>
+        <div class="form-send">
+            <label for="university2">University:</label>
+            <input type="text" id="university2" name="university" readonly>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    
+        
 </body>
 </html>
+
